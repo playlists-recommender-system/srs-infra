@@ -20,6 +20,9 @@ spec:
           volumeMounts:
             - name: shared-storage
               mountPath: /app/shared
+          env:
+            - name: DATASET_PATH
+              value: /app/shared/datasets/spotify/2023_spotify_ds1.csv
       volumes:
         - name: shared-storage
           persistentVolumeClaim:
@@ -36,4 +39,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
-  type: LoadBalancer
+  type: NodePort
