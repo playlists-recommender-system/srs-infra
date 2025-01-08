@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchlabels:
+    matchLabels:
       app: srs-model
   template:
     metadata:
@@ -16,7 +16,7 @@ spec:
         - name: srs-model
           image: agvicente/srs-model:latest
           ports:
-            containerPort: 8000
+            - containerPort: 8000
           volumeMounts:
             - name: shared-storage
               mountPath: /app/shared
@@ -25,7 +25,6 @@ spec:
           persistentVolumeClaim:
             claimName: project2-pv2-augustovicente
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
