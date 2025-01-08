@@ -22,7 +22,9 @@ spec:
               mountPath: /app/shared
           env:
           - name: DATASET_PATH
-            value: /app/shared/datasets/spotify/2023_spotify_ds1.csv
+            value: /app/shared/datasets/spotify/
+          - name: MODEL_PATH
+            value: /app/shared/models/
       volumes:
         - name: shared-storage
           persistentVolumeClaim:
