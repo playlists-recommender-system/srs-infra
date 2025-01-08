@@ -23,6 +23,8 @@ spec:
           env:
             - name: DATASET_PATH
               value: /app/shared/datasets/spotify/2023_spotify_ds1.csv
+            - name: API_URL
+              value: "http://srs-model-service:8000"
       volumes:
         - name: shared-storage
           persistentVolumeClaim:
