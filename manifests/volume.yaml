@@ -11,7 +11,7 @@ spec:
       namespace: augustovicente
   capacity:
     storage: 1Gi
-  storageClassName: default-storage-class
+  storageClassName: default-storage-class-augustovicente
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
