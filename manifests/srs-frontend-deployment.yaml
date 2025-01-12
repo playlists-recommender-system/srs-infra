@@ -20,11 +20,6 @@ spec:
           volumeMounts:
             - name: shared-storage
               mountPath: /app/shared
-          env:
-            - name: VUE_APP_DATASET_PATH
-              value: /app/shared/datasets/spotify/2023_spotify_songs.csv
-            - name: VUE_APP_API_URL
-              value: "http://localhost:30222"
       volumes:
         - name: shared-storage
           persistentVolumeClaim:
