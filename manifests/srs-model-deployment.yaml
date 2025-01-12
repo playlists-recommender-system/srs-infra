@@ -15,6 +15,9 @@ spec:
       containers:
         - name: srs-model
           image: agvicente/srs-model:latest
+          resources:
+            requests:
+              memory: 1Gi
           ports:
             - containerPort: 8000
           volumeMounts:
