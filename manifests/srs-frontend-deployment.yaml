@@ -24,7 +24,7 @@ spec:
             - name: DATASET_PATH
               value: /app/shared/datasets/spotify/2023_spotify_songs.csv
             - name: API_URL
-              value: "aaaa"
+              value: "http://10.42.0.242:30222"
       volumes:
         - name: shared-storage
           persistentVolumeClaim:
@@ -43,3 +43,4 @@ spec:
       targetPort: 80
       nodePort: 30111
   type: NodePort
+  
